@@ -35,7 +35,7 @@ pi
 
 `pwd` 的結果應當以 `/Downloads/pi-practice` 結尾。Pi 開啟後，再看一眼底部狀態列，確認當前工作目錄沒有變。
 
-如果 `cd` 提示 `No such file or directory`，表示前面的練習目錄沒有建立成功或名字不一致。回到 [安裝前檢查](/zh-TW/guide/before-install)，重新增立同名目錄。
+如果 `cd` 提示 `No such file or directory`，表示前面的練習目錄沒有建立成功或名字不一致。回到 [安裝前檢查](/zh-TW/guide/before-install)，重新建立同名目錄。
 
 如果目錄不對，不要傳送任務。退出 Pi，回到終端機重新 `cd` 到正確位置。
 

@@ -19,7 +19,10 @@ TARGETS = [ROOT / "docs" / "zh-TW", ROOT / "docs" / "public" / "examples-tw"]
 BANNED = {
     "回車": "輸入鍵",
     "新建": "新增",
+    "重新增立": "重新建立",
     "列表": "清單",
+    "命令行表": "命令清單",
+    "命令行列印": "命令會列印",
     "教程": "教學",
     "反饋": "回饋",
     "禁用": "停用",
@@ -59,7 +62,12 @@ BANNED = {
     "視頻": "影片",
 }
 
-PATTERN = re.compile("|".join(sorted(BANNED.keys(), key=len, reverse=True)))
+PATTERN = re.compile(
+    "|".join(
+        r"(?<!重)新建" if word == "新建" else re.escape(word)
+        for word in sorted(BANNED.keys(), key=len, reverse=True)
+    )
+)
 
 
 def main() -> int:

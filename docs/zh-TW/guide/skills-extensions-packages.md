@@ -103,4 +103,4 @@ Pi 包以當前使用者的完整系統權限執行。除了可執行的擴充�
 - [Pi 包](https://pi.dev/docs/latest/packages)
 - [技能、擴充功能和 Pi 包的區別](/zh-TW/tweets/04-skills-extensions)
 
-以上動態行為核驗於 2026-09-09。教學技能已在本機 Pi 0.80.10 中驗證為臨時載入，並出現在 `skill:action-list-review` 命令行表；Pi 的資源位置和命令可能更新，以對應官方頁面為準。
+以上動態行為核驗於 2026-09-09。教學技能已在本機 Pi 0.80.10 中驗證為臨時載入，並出現在 `skill:action-list-review` 命令清單；Pi 的資源位置和命令可能更新，以對應官方頁面為準。

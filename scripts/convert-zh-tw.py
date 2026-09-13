@@ -88,7 +88,11 @@ def apply_post_fixes(text: str) -> str:
     for _ in range(10):
         new_text = text
         for k in sorted(POST_FIXES.keys(), key=len, reverse=True):
-            new_text = new_text.replace(k, POST_FIXES[k])
+            if k == "新建":
+                # 「重新建立」含有「新建」兩字，不可誤轉成「重新增立」。
+                new_text = re.sub(r"(?<!重)新建", POST_FIXES[k], new_text)
+            else:
+                new_text = new_text.replace(k, POST_FIXES[k])
         # 正則收尾（避免字典取代造成重複後綴）
         new_text = re.sub(r"終端(?!機)", "終端機", new_text)
         new_text = re.sub(r"外掛(?!程式)", "外掛程式", new_text)
